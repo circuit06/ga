@@ -1,0 +1,70 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('/public/GA\ pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container-custom {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #003399;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.rate .currency {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.rate .currency select,
+.rate .currency input {
+    margin-left: 10px;
+}
+
+.rate .amount {
+    font-size: 24px;
+    color: #333;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #33cc33;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

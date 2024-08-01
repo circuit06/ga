@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectBank API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: black; /* Set background to black */
+            color: white; /* Set default text color to white */
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent navbar */
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important; /* Ensure navbar text is white */
+        }
+
+        .portfolio {
+            text-align: center;
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent portfolio section */
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent footer */
+        }
+
+        .btn-custom {
+            margin: 5px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">ConnectBank API</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/currencyxchange"> Our Rates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log In/Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio">
+        <h2>Portfolio</h2>
+        <hr>
+        <p>Name: Ang Ding Chao</p>
+        <p>Age: 17</p>
+        <p>Credit Score: 98</p>
+        <hr>
+        <div>
+            <button class="btn btn-primary btn-custom">Follow</button><br>
+            <button class="btn btn-secondary btn-custom">Past History</button>
+            <button class="btn btn-success btn-custom">Request to Borrow</button>
+            <button class="btn btn-warning btn-custom">Ability to Pay Up</button>
+        </div>
+    </div>
+
+    <!-- Footer (optional) -->
+    <div class="footer">
+        &copy; 2024 ConnectBank API. All rights reserved.
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

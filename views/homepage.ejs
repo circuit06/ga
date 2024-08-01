@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .portfolio {
+            background: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .option {
+            padding: 15px;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            width: 20%;
+        }
+
+        .option:hover {
+            background: #0056b3;
+        }
+
+        .search {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">ConnectBank API</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/currencyxchange"> Our Rates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log In/Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Custom Navbar -->
+    <div class="navbar">
+        <div>Welcome XXXXX</div>
+        <div><strong><a href="/portfolio" class="btn btn-secondary btn-custom">Portfolio</a></strong></div>
+    </div>
+
+    <header>
+        <h1>Your Balance: $10,000</h1>
+    </header>
+    <div class="portfolio">
+        <div class="options">
+            <div class="option"><a href="/topup" style="color: white;">Top Up</a></div>
+            <div class="option"><a href="/borrow" style="color: white;">Borrow</a></div>
+            <div class="option"><a href="/loan" style="color: white;">Lend Others</a></div>
+            <div class="option"><a href="/transfer" style="color: white;">Transfer</a></div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search Portfolio" />
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

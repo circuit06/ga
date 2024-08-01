@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectBank API - Log In/Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black; /* Set background to black */
+            color: white; /* Set default text color to white */
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent navbar */
+        }
+        .navbar-brand, .nav-link {
+            color: white !important; /* Ensure navbar text is white */
+        }
+        .footer {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">ConnectBank API</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/currencyxchange"> Our Rates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log In/Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container centered">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="POST">
+            <div class="form-group">
+                <label for="signUpFName">First Name:</label>
+                <input type="text" class="form-control" id="signUpFName" placeholder="First Name:">
+            </div>
+            <div class="form-group">
+                <label for="signUpLName">Last Name:</label>
+                <input type="text" class="form-control" id="signUpLName" placeholder="Last Name:">
+            </div>
+            <div class="form-group">
+                <label for="signUpNRIC">Last 4 digits of NRIC:</label>
+                <input type="text" class="form-control" id="signUpNRIC" placeholder="Last 4 digits of NRIC:">
+            </div>
+            <div class="form-group">
+                <label for="signUpEmail">Email:</label>
+                <input type="email" class="form-control" id="signUpEmail" placeholder="Email:">
+            </div>
+            <div class="form-group">
+                <label for="signUpPassword">Password:</label>
+                <input type="password" class="form-control" id="signUpPassword" placeholder="Password:">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <div class="mt-3">
+            Already a member? <a href="/login">Login</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer text-center">
+        &copy; 2024 ConnectBank API. All rights reserved.
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

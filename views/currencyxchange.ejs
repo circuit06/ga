@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Travel Concierge Currency Converter</title> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #111111; 
+            margin: 0; 
+            padding: 0; 
+        } 
+ 
+        .container-custom { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        } 
+ 
+        .header { 
+            background-color: #003399; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+            border-radius: 10px 10px 0 0; 
+        } 
+ 
+        .header h1 { 
+            font-size: 36px; 
+            margin: 0; 
+        } 
+ 
+        .rate { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px; 
+            border-bottom: 1px solid #ddd; 
+        } 
+ 
+        .rate .currency { 
+            display: flex; 
+            align-items: center; 
+            font-size: 24px; 
+        } 
+ 
+        .rate .currency select, 
+        .rate .currency input { 
+            margin-left: 10px; 
+        } 
+ 
+        .rate .amount { 
+            font-size: 24px; 
+            color: #333; 
+        } 
+ 
+        .button-container { 
+            text-align: center; 
+            margin-top: 20px; 
+        } 
+ 
+        .button-container button { 
+            background-color: #33cc33; 
+            color: white; 
+            border: none; 
+            padding: 15px 30px; 
+            font-size: 20px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        } 
+    </style> 
+</head> 
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">ConnectBank API</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/currencyxchange"> Our Rates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log In/Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <div class="container container-custom"> 
+        <div class="header"> 
+            <h1>CBAPI Converter</h1> 
+        </div> 
+        <div class="rate"> 
+            <div class="currency"> 
+                <label for="amountInput">Amount (SGD):</label> 
+                <input type="number" id="amountInput" class="form-control" placeholder="Enter amount"> 
+            </div> 
+        </div> 
+        <div class="rate"> 
+            <div class="currency"> 
+                <label for="currencySelect">Convert to:</label> 
+                <select id="currencySelect" class="form-control"> 
+                    <option value="0.74">USD - US Dollar</option> 
+                    <option value="0.64">EUR - Euro</option> 
+                    <option value="0.55">GBP - British Pound</option> 
+                    <option value="1.00">SGD - Singapore Dollar</option> 
+                    <option value="0.98">CAD - Canadian Dollar</option> 
+                    <option value="0.97">AUD - Australian Dollar</option> 
+                    <option value="5.75">HKD - Hong Kong Dollar</option> 
+                    <option value="81.66">JPY - Japanese Yen</option> 
+                    <option value="0.70">CHF - Swiss Franc</option> 
+                    <option value="4.77">CNY - Chinese Yuan</option> 
+                    <option value="54.42">INR - Indian Rupee</option> 
+                    <option value="2.76">SAR - Saudi Riyal</option> 
+                    <option value="0.23">BHD - Bahraini Dinar</option> 
+                    <option value="3.29">MYR - Malaysian Ringgit</option> 
+                    <option value="2.67">QAR - Qatari Riyal</option> 
+                    <option value="0.74">AED - United Arab Emirates Dirham</option> 
+                    <option value="17.01">MXN - Mexican Peso</option> 
+                    <option value="82.98">NGN - Nigerian Naira</option> 
+                    <option value="828.83">KRW - South Korean Won</option> 
+                    <option value="55.98">PKR - Pakistani Rupee</option> 
+                    <option value="27.34">THB - Thai Baht</option> 
+                    <option value="6.38">NOK - Norwegian Krone</option> 
+                    <option value="7.55">SEK - Swedish Krona</option> 
+                    <option value="6.39">DKK - Danish Krone</option> 
+                    <option value="12.58">ZAR - South African Rand</option> 
+                    <option value="1.05">NZD - New Zealand Dollar</option> 
+                    <option value="11.70">EGP - Egyptian Pound</option> 
+                    <option value="20.08">UAH - Ukrainian Hryvnia</option> 
+                    <option value="9.18">TRY - Turkish Lira</option> 
+                    <option value="3.72">BRL - Brazilian Real</option> 
+                    <option value="70.74">ARS - Argentine Peso</option> 
+                    <option value="10596.30">IDR - Indonesian Rupiah</option> 
+                    <option value="0.22">KWD - Kuwaiti Dinar</option> 
+                    <option value="0.28">OMR - Omani Rial</option> 
+                    <option value="0.96">BGN - Bulgarian Lev</option> 
+                    <option value="1.98">BWP - Botswana Pula</option> 
+                    <option value="11.68">RUB - Russian Ruble</option> 
+                    <option value="61.71">BDT - Bangladeshi Taka</option> 
+                    <option value="142.09">LKR - Sri Lankan Rupee</option> 
+                    <option value="30806.60">IRR - Iranian Rial</option> 
+                    <option value="2071843.50">VEF - Venezuelan Bolivar</option> 
+                    <option value="7.30">PLN - Polish Zloty</option> 
+                    <option value="3.12">RON - Romanian Leu</option> 
+                    <option value="91.00">ISK - Icelandic Krona</option> 
+                </select> 
+            </div> 
+        </div> 
+        <div class="rate"> 
+            <div class="currency"> 
+                <label for="convertedAmount">Converted Amount:</label> 
+                <input type="text" id="convertedAmount" class="form-control" readonly placeholder="Converted amount"> 
+            </div> 
+        </div> 
+        <div class="button-container"> 
+            <button onclick="convertCurrency()">Convert</button> 
+        </div> 
+    </div> 
+     
+    <script> 
+        function convertCurrency() { 
+            const currencySelect = document.getElementById('currencySelect'); 
+            const amountInput = document.getElementById('amountInput').value; 
+            const conversionRate = currencySelect.value; 
+            const convertedAmount = amountInput * conversionRate; 
+            const selectedCurrencyText = currencySelect.options[currencySelect.selectedIndex].text; 
+            document.getElementById('convertedAmount').value = `${convertedAmount.toFixed(2)} (${selectedCurrencyText})`; 
+        } 
+    </script> 
+     
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+</body> 
+</html>
